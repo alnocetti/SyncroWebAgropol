@@ -1,0 +1,115 @@
+package com.next.agropol.rest;
+
+import java.io.FileWriter;
+import java.io.Writer;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.next.agropol.model.CuentaCorriente;
+import com.next.agropol.reader.Reader;
+
+public class RestClient {
+	
+	public URL url;//your url i.e fetch data from .
+	public HttpURLConnection conn;
+	public Reader reader;
+	private int intentos;
+	
+	public RestClient() {
+		super();
+		this.reader = new Reader();
+	}
+	
+	public void postCuentaCorriente(List<CuentaCorriente> cc) {
+		
+		intentos = 0;
+		
+		while (intentos <= 1) {
+			
+			try {
+			
+				Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
+				
+//				url = new URL("http://api.patagoniawms.com/v1/Articulos");//your url i.e fetch data from .
+//				
+//				conn = (HttpURLConnection) url.openConnection();
+//				
+//				conn.setRequestMethod("POST");
+//				
+//				// seteo api-key 
+//				conn.addRequestProperty("X-API-Key", Application.API_KEY);
+//				
+//				conn.setReadTimeout(30000);
+//				conn.setConnectTimeout(30000);
+//				
+//				conn.setRequestProperty("Content-Type", "application/json");
+//				
+//				conn.setDoOutput(true);
+				
+				System.out.println(gson.toJson(cc));
+				
+//				Writer writer =  new FileWriter("C:\\Users\\anocetti\\Desktop\\CuentasCorrientes.json");
+//				gson.toJson(cc, writer);
+//				writer.flush();
+//				writer.close();
+//													
+//				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
+//				bw.write(auxi);
+//				bw.flush();
+//				bw.close();
+//						
+//				InputStreamReader _is;
+//				BufferedReader br;
+//				
+//				if (conn.getResponseCode() < HttpURLConnection.HTTP_BAD_REQUEST) {
+//				    _is = new InputStreamReader(conn.getInputStream());
+//				} else {
+//				     /* error from server */
+//				    _is = new InputStreamReader(conn.getErrorStream());
+//				}
+//				
+//				br = new BufferedReader(_is);
+//				
+//				StringBuilder builder = new StringBuilder();
+//				
+//				String output;
+//				
+//				while ((output = br.readLine()) != null) {
+//		
+//					builder.append(output);
+//				
+//				}
+//				
+//				String aux = builder.toString();
+//				
+//				webResponse.setResponseCode(conn.getResponseCode());
+//				
+//				if (conn.getResponseCode() < conn.HTTP_BAD_REQUEST) {
+//					
+//					webResponse.setResponseMessage(conn.getResponseMessage() + ", Articulo enviado correctamente: " + articulo.getCodigo() + " - " + articulo.getDescripcion());
+//					
+//				} else {
+//				     /* error from server */
+//					webResponse.setResponseMessage(aux);
+//					
+//				}
+//			
+//				conn.disconnect();
+			} catch (Exception e) {
+				
+				System.out.println("Exception in NetClientGet:- " + e);
+				intentos++;
+				continue;
+			}
+			
+			return;
+		}
+		
+		return;
+	}
+
+}
+

@@ -1,0 +1,22 @@
+package com.next.agropol.model;
+
+public class Vencimiento {
+
+	private String Cuenta;
+	private int Moneda;
+	private int Comprobante;
+	private String Vencimiento;
+	private String Fecha;
+	private String Codigo;
+	private String NumeroComprobante;
+	private String Contrato;
+	private String Boleto;
+	private String RazonSocial;
+	private float ImporteOriginal;
+	private float Saldo;
+	private float Iva;
+	private float ImporteNeto;
+	
+	
+	
+}

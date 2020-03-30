@@ -1,0 +1,306 @@
+package com.next.agropol.reader;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.linuxense.javadbf.DBFReader;
+import com.linuxense.javadbf.DBFRow;
+import com.linuxense.javadbf.DBFUtils;
+import com.next.agropol.model.Contrato;
+import com.next.agropol.model.CuentaCorriente;
+import com.next.agropol.model.Descarga;
+import com.next.agropol.model.Vencimiento;
+import com.next.agropol.utils.Utils;
+
+public class Reader {
+	
+	private DBFReader reader;
+	String original = "¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷ÿŸ⁄€‹›ﬂ‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛÙıˆ¯˘˙˚¸˝ˇï";
+    String ascii = "AAAAAAACEEEEIIIIDNOOOOOOUUUUYBaaaaaaaceeeeiiiionoooooouuuuyyN";
+	SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+	public Reader() {
+		super();
+		this.reader = null;
+	}
+	
+	public List<CuentaCorriente> readCuentasCorrientes() {
+				
+		List<CuentaCorriente> respuesta = new ArrayList<CuentaCorriente>();
+		
+		reader = null;
+		
+		try {
+			
+			reader = new DBFReader(new FileInputStream("C:/Users/anocetti/Desktop/datos Agropol/wbmovim.dbf"));
+			
+			DBFRow row;
+			
+			while((row = reader.nextRow()) != null) {
+				
+				CuentaCorriente cc = new CuentaCorriente();
+				
+				cc.setCuenta(row.getString("movcliente"));
+				
+				cc.setDebeHaber(row.getFloat("movimporte") < 0 ? false : true);
+				
+				if (row.getDate("movvto") != null)
+				cc.setFecha(format.format(row.getDate("movvto")));
+				
+				cc.setMoneda(row.getInt("movcambio") == 0 ? 1 : 2);
+				
+				String output = row.getString("movreferen");
+			    for (int i=0; i<original.length(); i++) {
+			    	
+			            output = output.replace(original.charAt(i), ascii.charAt(i));
+			            
+			            }
+				
+				cc.setReferencia(output);
+				
+				cc.setSaldo(row.getFloat("movimporte"));
+				
+				respuesta.add(cc);
+				
+			}
+			
+			DBFUtils.close(reader);
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+		return respuesta;
+		
+	}
+	
+	public List<Vencimiento> readVencimientos(){
+				
+		List<Vencimiento> respuesta = new ArrayList<Vencimiento>();
+		
+		reader = null;
+		
+		try {
+			
+			reader = new DBFReader(new FileInputStream("C:/Users/anocetti/Desktop/datos Agropol/wbvencim.dbf"));
+			
+			DBFRow row;
+			
+			while((row = reader.nextRow()) != null) {
+				
+				Vencimiento vencimiento = new Vencimiento();
+				
+				vencimiento.setBoleto(row.getString("venboleto"));
+				
+				vencimiento.setCodigo(row.getString("vencodigo"));
+				
+				vencimiento.setNumeroComprobante(row.getString("vennumero"));
+				
+				vencimiento.setContrato(row.getString("venslip"));
+				
+				vencimiento.setCuenta(row.getString("vencuenta"));
+				
+				if (row.getDate("venfecha") != null)
+				vencimiento.setFecha(format.format(row.getDate("venfecha")));
+
+				vencimiento.setImporteNeto(row.getFloat("venneto"));
+				
+				vencimiento.setImporteOriginal(row.getFloat("venimporte"));
+				
+				vencimiento.setIva(row.getFloat("veniva"));
+				
+				vencimiento.setMoneda(row.getInt("vencambio") == 0 ? 1 : 2);
+				
+				int comprobante = 0;
+				
+				switch(row.getInt("vencodigo")) {
+				
+				case 1:
+					comprobante = 1;
+					break;
+				case 10:
+					comprobante = 2;
+					break;
+				case 20:
+					comprobante = 3;
+					break;
+				case 50:
+					comprobante = 4;
+					break;
+				case 60:
+					comprobante = 5;
+					break;
+				}
+				vencimiento.setComprobante(comprobante);
+				
+				String output = row.getString("venotranom");
+			    for (int i=0; i<original.length(); i++) {
+			    	
+			            output = output.replace(original.charAt(i), ascii.charAt(i));
+			       
+			            }
+				vencimiento.setRazonSocial(output);
+							
+				vencimiento.setSaldo(row.getFloat("vensaldo"));
+				
+				vencimiento.setVencimiento(format.format(row.getDate("venvto")));
+				
+				respuesta.add(vencimiento);
+				
+			}
+			
+			DBFUtils.close(reader);
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+		return respuesta;
+		
+	}
+	
+	public List<Contrato> readContratos(){
+		
+		List<Contrato> respuesta = new ArrayList<Contrato>();
+		
+		reader = null;
+		
+		try {
+			
+			reader = new DBFReader(new FileInputStream("C:/Users/anocetti/Desktop/datos Agropol/wbslip.dbf"));
+			
+			DBFRow row;
+			
+			while((row = reader.nextRow()) != null) {
+				
+				Contrato contrato = new Contrato();
+				
+				contrato.setCantidad(row.getInt("sltotkilos"));
+				
+				contrato.setCantidadTexto(Utils.cantidadConLetra(row.getString("sltotkilos")));
+				
+				contrato.setComprador(Integer.parseInt(row.getString("slcodcompr")));
+				
+				contrato.setCondiciones(row.getString("sltipodesc"));
+				
+				contrato.setContrato(row.getString("slnumero"));
+				
+				contrato.setCosecha(row.getString("slcosecha"));
+				
+				contrato.setCuenta(row.getString("slcodvende"));
+				
+				contrato.setDestino(row.getInt("slprvdesti"));
+				
+				if (row.getDate("slfecha") != null)
+				contrato.setFecha(format.format(row.getDate("slfecha")));
+				
+				if (row.getDate("slentrehas") != null)
+				contrato.setFechaFin(format.format(row.getDate("slentrehas")));
+				
+				if (row.getDate("slentredes") != null)
+				contrato.setFechaInincio(format.format(row.getDate("slentredes")));
+				
+				if (row.getDate("slpagoel") != null)
+				contrato.setFechaPago(format.format(row.getDate("slpagoel")));
+				
+				contrato.setFormaPago(row.getString("slformapag"));
+				
+				contrato.setMoneda(row.getInt("slmoneda") == 0 ? 1 : 2);
+				
+				contrato.setOperacion(row.getString("slnomboper"));
+				
+				contrato.setPrecio(row.getFloat("slprecio"));
+				
+				contrato.setProcedencia(row.getInt("slprvproce"));
+				
+				contrato.setProducto(Integer.parseInt(row.getString("slcereal")));
+				
+				contrato.setPuerto(row.getInt("slpuerto"));
+				
+				contrato.setPuestoSobre(row.getString("slpuesnomb"));
+				
+				contrato.setTipo(row.getInt("sltipocere"));
+				
+				contrato.setVendedor(Integer.parseInt(row.getString("slcodvende")));
+				
+				contrato.setVenta(row.getString("sldesventa"));
+				
+				respuesta.add(contrato);
+				
+				contrato.setCuenta(row.getString("slcodcompr"));
+
+				respuesta.add(contrato);
+				
+			}
+			
+			DBFUtils.close(reader);
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+		return respuesta;
+		
+	}
+	
+	public List<Descarga> readDescargas(){
+		
+		List<Descarga> respuesta = new ArrayList<Descarga>();
+		
+		reader = null;
+		
+		try {
+			
+			reader = new DBFReader(new FileInputStream("C:/Users/anocetti/Desktop/datos Agropol/wbdescar.dbf"));
+			
+			DBFRow row;
+			
+			while((row = reader.nextRow()) != null) {
+				
+				Descarga descarga = new Descarga();
+				
+				descarga.setContrato(row.getString("desnroslip"));
+				
+				descarga.setCPorte(row.getInt("desnporte"));
+				
+				descarga.setCuenta(row.getString("desvende"));
+				
+				if(row.getDate("desfecha") != null)
+				descarga.setFecha(format.format(row.getDate("desfecha")));
+				
+				descarga.setKilos(row.getInt("deskgdesca"));
+				
+				descarga.setMerma(row.getInt("deskgmerma"));
+				
+				descarga.setNumero(row.getInt("desnumero"));
+				
+				//revisar envio descripcion
+				descarga.setProcedencia(row.getString("desprocede"));
+				
+				descarga.setProducto(row.getInt("descereal"));
+				
+				descarga.setPuerto(row.getInt("despuerto"));
+
+				respuesta.add(descarga);
+				
+			}
+			
+			DBFUtils.close(reader);
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+		return respuesta;
+		
+	}
+	
+	
+}

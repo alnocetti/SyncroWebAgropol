@@ -1,0 +1,19 @@
+package com.next.agropol.model;
+
+public class Analisis {
+
+	private String Cuenta;
+	private String Contrato;
+	private int Numero;
+	private int Kilos;
+	private float Honorarios;
+	private float ACargo;
+	private String Grado;
+	private String Descripcion;
+	private float Litros;
+	private float Porcentaje;
+	
+	
+	
+	
+}

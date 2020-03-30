@@ -1,0 +1,85 @@
+package com.next.agropol.model;
+
+public class Analisis {
+
+	private String Cuenta;
+	private String Contrato;
+	private int Numero;
+	private int Kilos;
+	private float Honorarios;
+	private float ACargo;
+	private String Grado;
+	private String Descripcion;
+	private float Litros;
+	private float Porcentaje;
+	
+	public Analisis() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public String getCuenta() {
+		return Cuenta;
+	}
+	public void setCuenta(String cuenta) {
+		Cuenta = cuenta;
+	}
+	public String getContrato() {
+		return Contrato;
+	}
+	public void setContrato(String contrato) {
+		Contrato = contrato;
+	}
+	public int getNumero() {
+		return Numero;
+	}
+	public void setNumero(int numero) {
+		Numero = numero;
+	}
+	public int getKilos() {
+		return Kilos;
+	}
+	public void setKilos(int kilos) {
+		Kilos = kilos;
+	}
+	public float getHonorarios() {
+		return Honorarios;
+	}
+	public void setHonorarios(float honorarios) {
+		Honorarios = honorarios;
+	}
+	public float getACargo() {
+		return ACargo;
+	}
+	public void setACargo(float aCargo) {
+		ACargo = aCargo;
+	}
+	public String getGrado() {
+		return Grado;
+	}
+	public void setGrado(String grado) {
+		Grado = grado;
+	}
+	public String getDescripcion() {
+		return Descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		Descripcion = descripcion;
+	}
+	public float getLitros() {
+		return Litros;
+	}
+	public void setLitros(float litros) {
+		Litros = litros;
+	}
+	public float getPorcentaje() {
+		return Porcentaje;
+	}
+	public void setPorcentaje(float porcentaje) {
+		Porcentaje = porcentaje;
+	}
+	
+	
+	
+	
+}

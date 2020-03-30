@@ -1,0 +1,36 @@
+package com.next.agropol.controller;
+
+import java.util.ArrayList;
+
+import com.next.agropol.model.CuentaCorriente;
+import com.next.agropol.reader.Reader;
+import com.next.agropol.rest.RestClient;
+
+public class Controller {
+
+	public static Controller instance;
+	public Reader reader;
+	public RestClient restClient;
+	
+	public Controller() {
+		super();
+		this.reader = new Reader();
+		this.restClient = new RestClient();
+	}
+
+	public static Controller getInstance() {
+				
+		instance = instance == null ? new Controller() : instance;
+		
+		return instance;
+	}
+	
+	public void postCuentasCorrientes() {
+		
+		ArrayList<CuentaCorriente> cuentasCorrientes = this.reader.readCuentasCorrientes();
+		
+		this.restClient.postCuentaCorriente(cuentasCorrientes);
+		
+	}
+	
+}

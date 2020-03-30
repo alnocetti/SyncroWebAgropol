@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;FechaInincio&apos; in &apos;com.next.agropol.model.Contrato&apos; to &apos;FechaInicio&apos;&#x0D;&#x0A;- Original project: &apos;SyncroWebAgropol&apos;&#x0D;&#x0A;- Original element: &apos;com.next.agropol.model.Contrato.FechaInincio&apos;&#x0D;&#x0A;- Renamed element: &apos;com.next.agropol.model.Contrato.FechaInicio&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;FechaInincio&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;com.next.agropol.model{Contrato.java[Contrato^FechaInincio" name="FechaInicio" references="true" setter="false" stamp="1585571590851" textual="false" version="1.0"/>
+</session>

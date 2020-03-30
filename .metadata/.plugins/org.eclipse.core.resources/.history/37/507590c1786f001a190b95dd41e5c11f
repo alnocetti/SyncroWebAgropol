@@ -1,0 +1,20 @@
+package com.next.agropol.main;
+
+import com.next.agropol.controller.Controller;
+
+public class Start {
+
+	public static void main(String[] args) {
+		
+		Controller.getInstance().postCuentasCorrientes();
+		Controller.getInstance().postVencimientos();
+		Controller.getInstance().postContratos();
+		Controller.getInstance().postDescargas();
+		Controller.getInstance().postAnalisis();
+		Controller.getInstance().postComprobantes();
+		Controller.getInstance().postCuentas();
+		Controller.getInstance().postProductos();
+		Controller.getInstance().postPuertos();
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.next.agropol.model;
+
+public class Cuenta {
+
+	private String Codigo;
+	private String RazonSocial;
+	
+}

@@ -1,0 +1,16 @@
+package com.next.agropol.model;
+
+public class Comprobante {
+
+	private String Cuenta;
+	private String Contrato;
+	private int Comprobante;
+	private String Emision;
+	private String Numero;
+	private String Form1116;
+	private String FechaEmision;
+	private String FechaVencimiento;
+	private float Total;
+	private int Kilos;
+	
+}

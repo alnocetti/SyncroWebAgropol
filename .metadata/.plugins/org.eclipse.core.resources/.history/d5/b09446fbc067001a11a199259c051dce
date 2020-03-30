@@ -1,0 +1,5 @@
+package com.next.agropol.model;
+
+public class CuentaCorriente {
+
+}

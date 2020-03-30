@@ -1,0 +1,8 @@
+package com.next.agropol.model;
+
+public class Producto {
+
+	private String Codigo;
+	private String Descripcion;
+	
+}

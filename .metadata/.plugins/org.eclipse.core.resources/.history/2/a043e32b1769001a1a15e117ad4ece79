@@ -1,0 +1,8 @@
+package com.next.agropol.model;
+
+public class Puerto {
+
+	private int Codigo;
+	private String Descripcion;
+	
+}

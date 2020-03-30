@@ -1,0 +1,13 @@
+package com.next.agropol.main;
+
+import com.next.agropol.controller.Controller;
+
+public class Start {
+
+	public static void main(String[] args) {
+		
+		Controller.getInstance().postCuentasCorrientes();
+		
+	}
+
+}

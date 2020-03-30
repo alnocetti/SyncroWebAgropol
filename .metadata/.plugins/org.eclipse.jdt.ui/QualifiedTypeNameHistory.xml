@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.next.agropol.controller.Controller"/>
+<fullyQualifiedTypeName name="com.linuxense.javadbf.DBFReader"/>
+<fullyQualifiedTypeName name="com.next.agropol.model.Analisis"/>
+<fullyQualifiedTypeName name="com.linuxense.javadbf.DBFUtils"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.Writer"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="com.next.agropol.reader.Reader"/>
+<fullyQualifiedTypeName name="com.next.agropol.rest.RestClient"/>
+<fullyQualifiedTypeName name="com.next.agropol.model.CuentaCorriente"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

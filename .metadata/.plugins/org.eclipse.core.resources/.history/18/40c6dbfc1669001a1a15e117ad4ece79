@@ -1,0 +1,31 @@
+package com.next.agropol.model;
+
+public class Contrato {
+	
+	private String Cuenta;
+	private String Contrato;
+	private String Fecha;
+	private String Operacion;
+	private String Venta;
+	private int Vendedor;
+	private int Comprador;
+	private int producto;
+	private String Cosecha;
+	private int Cantidad;
+	private String CantidadTexto;
+	private float Precio;
+	private int Moneda;
+	private String Condiciones;
+	private int Tipo;
+	private String FechaInincio;
+	private String FechaFin;
+	private String FechaPago;
+	private String FormaPago;
+	private int Procedencia;
+	private int Destino;
+	private int Puerto;
+	private String PuestoSobre;
+	
+	
+
+}

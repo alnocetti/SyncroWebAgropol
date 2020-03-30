@@ -1,0 +1,16 @@
+package com.next.agropol.model;
+
+public class Descargas {
+
+	private String Cuenta;
+	private String Contrato;
+	private String Fecha;
+	private int Numero;
+	private int Producto;
+	private int Puerto;
+	private int Kilos;
+	private int Merma;
+	private int CPorte;
+	private int Procedencia;
+	
+}

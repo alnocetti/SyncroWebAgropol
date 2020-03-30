@@ -1,0 +1,13 @@
+package com.next.agropol.model;
+
+public class CuentaCorriente {
+	
+	private String Cuenta;
+	private int Moneda;
+	private String Fecha;
+	private String Referencia;
+	private boolean DebeHaber;
+	private float Saldo;
+	
+	
+}
