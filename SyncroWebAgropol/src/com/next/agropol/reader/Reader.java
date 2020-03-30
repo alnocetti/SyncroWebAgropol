@@ -247,6 +247,8 @@ public class Reader {
 				
 				contrato.setVenta(row.getString("sldesventa"));
 				
+				contrato.setNumeroComprador(row.getString("slboleto"));
+				
 				respuesta.add(contrato);
 								
 
@@ -273,14 +275,23 @@ public class Reader {
 				if (row.getDate("slfecha") != null)
 				contrato1.setFecha(format.format(row.getDate("slfecha")));
 				
-				if (row.getDate("slentrehas") != null)
-				contrato1.setFechaFin(format.format(row.getDate("slentrehas")));
+				if (row.getDate("slentrehas") != null) {
+					contrato1.setFechaFin(format.format(row.getDate("slentrehas")));
+				}else {
+					contrato1.setFechaFin("");
+				}
 				
-				if (row.getDate("slentredes") != null)
-				contrato1.setFechaInincio(format.format(row.getDate("slentredes")));
+				if (row.getDate("slentredes") != null) {
+					contrato1.setFechaInincio(format.format(row.getDate("slentredes")));
+				}else {
+					contrato1.setFechaInicio("");
+				}
 				
-				if (row.getDate("slpagoel") != null)
-				contrato1.setFechaPago(format.format(row.getDate("slpagoel")));
+				if (row.getDate("slpagoel") != null) {
+					contrato1.setFechaPago(format.format(row.getDate("slpagoel")));
+				}else {
+					contrato1.setFechaPago("");
+				}
 				
 				contrato1.setFormaPago(row.getString("slformapag"));
 				
@@ -303,6 +314,8 @@ public class Reader {
 				contrato1.setVendedor(Integer.parseInt(row.getString("slcodvende")));
 				
 				contrato1.setVenta(row.getString("sldesventa"));
+				
+				contrato1.setNumeroComprador(row.getString("slboleto"));
 				
 				respuesta.add(contrato1);
 				

@@ -25,6 +25,20 @@ public class Contrato {
 	private int Destino;
 	private int Puerto;
 	private String PuestoSobre;
+	private String NumeroComprador;
+	
+	public String getFechaInicio() {
+		return FechaInicio;
+	}
+	public void setFechaInicio(String fechaInicio) {
+		FechaInicio = fechaInicio;
+	}
+	public String getNumeroComprador() {
+		return NumeroComprador;
+	}
+	public void setNumeroComprador(String numeroComprador) {
+		NumeroComprador = numeroComprador;
+	}
 	public String getCuenta() {
 		return Cuenta;
 	}
