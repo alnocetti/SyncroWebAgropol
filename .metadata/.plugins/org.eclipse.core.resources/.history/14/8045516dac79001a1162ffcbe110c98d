@@ -1,0 +1,38 @@
+package com.next.agropol.rest;
+
+public class WebResponse {
+	
+	private String NombreArchivo;
+	private String MensajeArchivo;
+	private String Mensaje;
+	
+	public WebResponse() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getNombreArchivo() {
+		return NombreArchivo;
+	}
+
+	public void setNombreArchivo(String nombreArchivo) {
+		NombreArchivo = nombreArchivo;
+	}
+
+	public String getMensajeArchivo() {
+		return MensajeArchivo;
+	}
+
+	public void setMensajeArchivo(String mensajeArchivo) {
+		MensajeArchivo = mensajeArchivo;
+	}
+
+	public String getMensaje() {
+		return Mensaje;
+	}
+
+	public void setMensaje(String mensaje) {
+		Mensaje = mensaje;
+	}
+
+}

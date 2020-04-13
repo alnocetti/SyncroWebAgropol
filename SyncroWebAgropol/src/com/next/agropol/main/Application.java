@@ -40,7 +40,11 @@ public class Application {
 		Controller.getInstance().postProductos();
 		Controller.getInstance().postPuertos();
 		
-        JOptionPane.showMessageDialog(null, "Proceso finalizado.", "Syncro web", JOptionPane.INFORMATION_MESSAGE);
+		String respuesta = Controller.getInstance().cargaReportes();
+		
+		JOptionPane.showMessageDialog(null, respuesta, "Syncro web", JOptionPane.INFORMATION_MESSAGE);
+		
+        //JOptionPane.showMessageDialog(null, "Proceso finalizado.", "Syncro web", JOptionPane.INFORMATION_MESSAGE);
         
 	}
 

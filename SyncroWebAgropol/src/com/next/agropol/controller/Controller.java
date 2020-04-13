@@ -13,6 +13,7 @@ import com.next.agropol.model.Puerto;
 import com.next.agropol.model.Vencimiento;
 import com.next.agropol.reader.Reader;
 import com.next.agropol.rest.RestClient;
+import com.next.agropol.rest.WebResponse;
 
 public class Controller {
 
@@ -103,6 +104,22 @@ public class Controller {
 		
 		this.restClient.postPuertos(puertos);
 		
+	}
+	
+	public String cargaReportes() {
+		
+		List<WebResponse> response = this.restClient.cargaReportes();
+		
+		String mensaje = "";
+		
+		for (WebResponse wr : response) {
+			
+			mensaje += wr.getNombreArchivo() + ", ";
+			mensaje += wr.getMensajeArchivo() + ", ";
+			mensaje += wr.getMensaje() + "\n";
+		}
+		
+		return mensaje;
 	}
 	
 }

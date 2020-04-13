@@ -1,0 +1,5 @@
+package com.next.agropol.rest;
+
+public class WebResponse {
+
+}

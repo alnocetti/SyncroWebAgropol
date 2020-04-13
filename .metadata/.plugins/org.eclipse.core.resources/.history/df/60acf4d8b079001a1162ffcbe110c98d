@@ -1,0 +1,122 @@
+package com.next.agropol.controller;
+
+import java.util.List;
+
+import com.next.agropol.model.Analisis;
+import com.next.agropol.model.Comprobante;
+import com.next.agropol.model.Contrato;
+import com.next.agropol.model.Cuenta;
+import com.next.agropol.model.CuentaCorriente;
+import com.next.agropol.model.Descarga;
+import com.next.agropol.model.Producto;
+import com.next.agropol.model.Puerto;
+import com.next.agropol.model.Vencimiento;
+import com.next.agropol.reader.Reader;
+import com.next.agropol.rest.RestClient;
+import com.next.agropol.rest.WebResponse;
+
+public class Controller {
+
+	public static Controller instance;
+	public Reader reader;
+	public RestClient restClient;
+	
+	public Controller() {
+		super();
+		this.reader = new Reader();
+		this.restClient = new RestClient();
+	}
+
+	public static Controller getInstance() {
+				
+		instance = instance == null ? new Controller() : instance;
+		
+		return instance;
+	}
+	
+	public void postCuentasCorrientes() {
+		
+		List<CuentaCorriente> cuentasCorrientes = this.reader.readCuentasCorrientes();
+		
+		this.restClient.postCuentaCorriente(cuentasCorrientes);
+		
+	}
+	
+	public void postVencimientos() {
+		
+		List<Vencimiento> vencimientos = this.reader.readVencimientos();
+		
+		this.restClient.postVencimientos(vencimientos);
+		
+	}
+	
+	public void postContratos() {
+		
+		List<Contrato> contratos = this.reader.readContratos();
+		
+		this.restClient.postContratos(contratos);
+		
+	}
+	
+	public void postDescargas() {
+		
+		List<Descarga> descargas = this.reader.readDescargas();
+		
+		this.restClient.postDescargas(descargas);
+		
+	}
+	
+	public void postAnalisis() {
+		
+		List<Analisis> analisis = this.reader.readAnalisis();
+		
+		this.restClient.postAnalisis(analisis);
+		
+	}
+	
+	public void postComprobantes() {
+		
+		List<Comprobante> comprobantes = this.reader.readComprobantes();
+		
+		this.restClient.postComprobantes(comprobantes);
+		
+	}
+	
+	public void postCuentas() {
+		
+		List<Cuenta> cuentas = this.reader.readCuentas();
+		
+		this.restClient.postCuentas(cuentas);
+		
+	}
+	
+	public void postProductos() {
+		
+		List<Producto> productos = this.reader.readProductos();
+		
+		this.restClient.postProductos(productos);
+		
+	}
+	
+	public void postPuertos() {
+		
+		List<Puerto> puertos = this.reader.readPuertos();
+		
+		this.restClient.postPuertos(puertos);
+		
+	}
+	
+	public void cargaReportes() {
+		
+		List<WebResponse> response = this.restClient.cargaReportes();
+		
+		String mensaje;
+		
+		for (WebResponse wr : response) {
+			
+			mensaje = wr.getMensajeArchivo() + "\n";
+			
+		}
+	}
+	
+}

@@ -1,13 +1,19 @@
 package com.next.agropol.rest;
 
+import java.io.BufferedReader;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.Writer;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 import com.next.agropol.main.Application;
 import com.next.agropol.model.Analisis;
 import com.next.agropol.model.Comprobante;
@@ -806,6 +812,59 @@ public class RestClient {
 		}
 		
 		return;
+	}
+	
+	public List<WebResponse> cargaReportes() {
+		
+		List<WebResponse> webResponses = new ArrayList<WebResponse>();
+		
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+		try {
+			
+			url = new URL("http://localhost:8080/reportes-agropol/wsCargaReportes.php");
+
+			conn = (HttpURLConnection) url.openConnection();
+			
+			conn.setRequestMethod("GET");
+			
+			conn.setReadTimeout(30000);
+			conn.setConnectTimeout(30000);
+			
+			//conn.setRequestProperty("Content-Type", "application/json");
+			
+			conn.setDoOutput(true);
+			
+			InputStreamReader in = new InputStreamReader(conn.getInputStream());
+			
+			BufferedReader br = new BufferedReader(in);
+			
+			String output;
+			
+			TypeToken<ArrayList<WebResponse>> token = new TypeToken<ArrayList<WebResponse>>() {};
+						
+			while ((output = br.readLine()) != null) {
+								
+				webResponses =  gson.fromJson(output,  token.getType());
+				
+			}
+			
+//			for (WebResponse wr : webResponses) {
+//			
+//				JOptionPane.showMessageDialog(null, wr.getMensajeArchivo(), "Syncro web", JOptionPane.INFORMATION_MESSAGE);
+//			}
+			
+			conn.disconnect();
+			
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return webResponses;
 	}
 	
 }
