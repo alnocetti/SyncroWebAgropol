@@ -27,8 +27,11 @@ public class Contrato {
 	private String PuestoSobre;
 	private String NumeroComprador;
 	
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> 20444cafebaf831f809c606a1a06ae1e047d39e3
 	public String getFechaInicio() {
 		return FechaInicio;
 	}
