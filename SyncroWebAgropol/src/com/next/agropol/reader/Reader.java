@@ -557,7 +557,9 @@ public class Reader {
 				
 				comprobante.setTotal(row.getFloat("cabtotal"));
 				
-				respuesta.add(comprobante);
+				if (Integer.parseInt(row.getString("cabnrovend")) != 0)
+			
+					respuesta.add(comprobante);
 				
 				// Para comprador
 				
@@ -583,7 +585,9 @@ public class Reader {
 				
 				comprobante1.setTotal(row.getFloat("cabtotal"));
 				
-				respuesta.add(comprobante1);
+				if (Integer.parseInt(row.getString("cabnrocomp")) != 0)
+				
+					respuesta.add(comprobante1);
 				
 			}
 			
