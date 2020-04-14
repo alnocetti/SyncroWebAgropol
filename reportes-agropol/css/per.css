@@ -1,0 +1,156 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color:#FFFFFF;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#000000;
+}
+th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.bodystyle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.small {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+}
+.medium {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:small;
+	color:#7BB745;
+	font-weight:bold;
+}
+.mediumIndex {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:small;
+	color:#FFFFFF;
+	font-weight:bold;
+	background-color:#7BB745;
+}
+.big {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color:#7BB745;
+	font-weight:bold;
+}
+.xbig {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+.expanded {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	letter-spacing: 2px;
+}
+.justified {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+.footer {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 9px;
+	color: #999999;
+}
+.box1 {
+	padding: 3px;
+	border-width: medium;
+	border-style: solid;
+	border-color: #CCCCCC #666666 #666666 #CCCCCC;
+}
+.box2 {
+	font-style: italic;
+	word-spacing: 2pt;
+	padding: 3px;
+	border: 1px solid;
+}
+.tablaCompras{
+	margin-left:0px;
+	background-color: #FFFFFF;
+	border:thin solid #0066CC;
+}
+.menuCompras{
+	vertical-align:top;
+	margin-left:0px;
+	
+}
+.footerCompras{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	vertical-align:bottom;
+	color:#FFFFFF;
+}
+.tablaRegistro1{
+	margin-left:0px;
+	top:auto;
+	border:thin solid #7BB745;
+	margin-left:100px;
+}
+.tablaRegistro2{
+	margin-left:10px;
+	top:auto;
+	background-color:#FFFFFF;
+	border:thin solid #0066CC;
+}
+.tablaRegistro{
+	margin-left:0px;
+	top:auto;
+	background-color:#0066CC;
+	border:thin solid #FFFFFF;
+}
+.button { 
+	background-color:#FFD14C;
+	color:#FFFFFF;
+	font-weight:bold;
+	border-style:solid;
+	border-color:#000000;
+}
+.textbox {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.tablaUsuarios1{
+	vertical-align:top;
+	background-color:#FFFFFF;
+	border:thin solid #0066CC;
+	font-size:small;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.tablaUsuarios{
+	vertical-align:top;
+	background-color:#FFFFFF;
+	border:thin solid #000000;
+	font-size:12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+
+}
+.links{
+	font-size:small;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#7BB745;
+	text-decoration:none;
+}
+.linksIndex{
+	font-size:small;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.cursor{
+	cursor:pointer;
+	font-size:small;
+	color:#000000;
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration:none;
+}
+.tablaModif{
+	border:thin solid #0066CC;
+}

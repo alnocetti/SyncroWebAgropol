@@ -24,8 +24,8 @@ import com.next.agropol.utils.Utils;
 public class Reader {
 	
 	private DBFReader reader;
-	String original = "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖØÙÚÛÜİßàáâãäåæçèéêëìíîïğñòóôõöøùúûüıÿ•¥";
-    String ascii = "AAAAAAACEEEEIIIIDNOOOOOOUUUUYBaaaaaaaceeeeiiiionoooooouuuuyyNÑ";
+	String original = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
+    String ascii = "AAAAAAACEEEEIIIIDNOOOOOOUUUUYBaaaaaaaceeeeiiiionoooooouuuuyyNï¿½";
 	SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
 	public Reader() {
@@ -104,7 +104,7 @@ public class Reader {
 				
 				vencimiento.setCodigo(row.getString("vencodigo"));
 				
-				vencimiento.setNumeroComprobante(row.getString("vennumero"));
+				vencimiento.setNumeroComprobante(row.getString("ventipcmp") + "-" +row.getString("vensucur") + "-" + row.getString("vennumero"));
 				
 				vencimiento.setContrato(row.getString("venslip"));
 				

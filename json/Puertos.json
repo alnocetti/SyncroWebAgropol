@@ -1,0 +1,398 @@
+[
+  {
+    "Codigo": 1,
+    "Descripcion": "ROSARIO"
+  },
+  {
+    "Codigo": 2,
+    "Descripcion": "SAN LORENZO"
+  },
+  {
+    "Codigo": 3,
+    "Descripcion": "AZUL"
+  },
+  {
+    "Codigo": 4,
+    "Descripcion": "GUALEGUAY"
+  },
+  {
+    "Codigo": 5,
+    "Descripcion": "GUALEGUAYCHU"
+  },
+  {
+    "Codigo": 6,
+    "Descripcion": "SALTO"
+  },
+  {
+    "Codigo": 7,
+    "Descripcion": "DEL GUAZU"
+  },
+  {
+    "Codigo": 8,
+    "Descripcion": "TANDIL"
+  },
+  {
+    "Codigo": 9,
+    "Descripcion": "SAN JERONIMO NORTE"
+  },
+  {
+    "Codigo": 10,
+    "Descripcion": "S.MARTIN-QUEBRACHO"
+  },
+  {
+    "Codigo": 11,
+    "Descripcion": "CORTINES"
+  },
+  {
+    "Codigo": 12,
+    "Descripcion": "SAN MARTIN (BUYATTI)"
+  },
+  {
+    "Codigo": 13,
+    "Descripcion": "SAN MARTIN TER. 6"
+  },
+  {
+    "Codigo": 14,
+    "Descripcion": "GRAL LAS HERAS"
+  },
+  {
+    "Codigo": 15,
+    "Descripcion": "CARLOS CASARES"
+  },
+  {
+    "Codigo": 16,
+    "Descripcion": "GENERAL LAGOS"
+  },
+  {
+    "Codigo": 17,
+    "Descripcion": "MUELLE PAMPA (LPC)"
+  },
+  {
+    "Codigo": 18,
+    "Descripcion": "GENERAL RODRIGUEZ"
+  },
+  {
+    "Codigo": 19,
+    "Descripcion": "RAMALLO BS.AS."
+  },
+  {
+    "Codigo": 20,
+    "Descripcion": "TERMINAL GALVAN"
+  },
+  {
+    "Codigo": 21,
+    "Descripcion": "PUERTO SAN MARTIN"
+  },
+  {
+    "Codigo": 22,
+    "Descripcion": "ARRECIFES"
+  },
+  {
+    "Codigo": 23,
+    "Descripcion": "P.SAN MARTIN-CARGILL"
+  },
+  {
+    "Codigo": 24,
+    "Descripcion": "SITIO CERO"
+  },
+  {
+    "Codigo": 25,
+    "Descripcion": "P.SAN MARTIN-NIDERA"
+  },
+  {
+    "Codigo": 26,
+    "Descripcion": "MICAELA CASCALLARES"
+  },
+  {
+    "Codigo": 27,
+    "Descripcion": "P.S.MARTIN-S.LORENZO"
+  },
+  {
+    "Codigo": 28,
+    "Descripcion": "SAN MARTIN TRANSITO"
+  },
+  {
+    "Codigo": 29,
+    "Descripcion": "OLAVARRIA"
+  },
+  {
+    "Codigo": 30,
+    "Descripcion": "PUNTA ALVEAR"
+  },
+  {
+    "Codigo": 31,
+    "Descripcion": "PLANTA DEL COMPRADOR"
+  },
+  {
+    "Codigo": 32,
+    "Descripcion": "BAHIA BLANCA"
+  },
+  {
+    "Codigo": 33,
+    "Descripcion": "PROCEDENCIA"
+  },
+  {
+    "Codigo": 34,
+    "Descripcion": "C.DEL URUGUAY"
+  },
+  {
+    "Codigo": 35,
+    "Descripcion": "DIAMANTE"
+  },
+  {
+    "Codigo": 36,
+    "Descripcion": "DAIREAUX"
+  },
+  {
+    "Codigo": 37,
+    "Descripcion": "RECREO (SANTA FE)"
+  },
+  {
+    "Codigo": 38,
+    "Descripcion": "B.BLANCA PTA CARGILL"
+  },
+  {
+    "Codigo": 39,
+    "Descripcion": "RICARDONE (VICENTIN)"
+  },
+  {
+    "Codigo": 40,
+    "Descripcion": "SAN MIGUEL DEL MONTE"
+  },
+  {
+    "Codigo": 41,
+    "Descripcion": "B.BLANCA UTE"
+  },
+  {
+    "Codigo": 42,
+    "Descripcion": "F.STA CLARA ROSARI0"
+  },
+  {
+    "Codigo": 43,
+    "Descripcion": "OPEN DOOR"
+  },
+  {
+    "Codigo": 44,
+    "Descripcion": "B.JUAREZ"
+  },
+  {
+    "Codigo": 45,
+    "Descripcion": "RENOVA TIMBUES"
+  },
+  {
+    "Codigo": 46,
+    "Descripcion": "TIMBUES (NOBLE)"
+  },
+  {
+    "Codigo": 47,
+    "Descripcion": "TIMBUES  (LDC)"
+  },
+  {
+    "Codigo": 48,
+    "Descripcion": "ROSARIO/CHABAS"
+  },
+  {
+    "Codigo": 49,
+    "Descripcion": "ROSARIO/PTO.S.MARTIN"
+  },
+  {
+    "Codigo": 50,
+    "Descripcion": "ROSARIO/S.LORENZO"
+  },
+  {
+    "Codigo": 51,
+    "Descripcion": "ROSARIO (UNIDAD VI)"
+  },
+  {
+    "Codigo": 52,
+    "Descripcion": "BARADERO"
+  },
+  {
+    "Codigo": 53,
+    "Descripcion": "DARSENA"
+  },
+  {
+    "Codigo": 54,
+    "Descripcion": "SAN JERONIMO SUD"
+  },
+  {
+    "Codigo": 55,
+    "Descripcion": "TERMINAL LAS PALMAS"
+  },
+  {
+    "Codigo": 56,
+    "Descripcion": "PLANTA METRIVE"
+  },
+  {
+    "Codigo": 57,
+    "Descripcion": "QUEBRACHO"
+  },
+  {
+    "Codigo": 58,
+    "Descripcion": "FOTEZUELA"
+  },
+  {
+    "Codigo": 59,
+    "Descripcion": "SAN LORENZO(ACA)"
+  },
+  {
+    "Codigo": 60,
+    "Descripcion": "PERGAMINO"
+  },
+  {
+    "Codigo": 61,
+    "Descripcion": "S.LORENZO(VICENTIN)"
+  },
+  {
+    "Codigo": 62,
+    "Descripcion": "PUERTO SAN PEDRO"
+  },
+  {
+    "Codigo": 63,
+    "Descripcion": "CHACABUCO"
+  },
+  {
+    "Codigo": 64,
+    "Descripcion": "CAPILLA DE SE#OR"
+  },
+  {
+    "Codigo": 65,
+    "Descripcion": "SARANDI"
+  },
+  {
+    "Codigo": 66,
+    "Descripcion": "SER.PORT.S.NICOLAS"
+  },
+  {
+    "Codigo": 67,
+    "Descripcion": "SANTA FE"
+  },
+  {
+    "Codigo": 68,
+    "Descripcion": "VILLA LIA"
+  },
+  {
+    "Codigo": 69,
+    "Descripcion": "PILAR"
+  },
+  {
+    "Codigo": 70,
+    "Descripcion": "SAN MIGUEL DEL MONTE"
+  },
+  {
+    "Codigo": 71,
+    "Descripcion": "V.CONST(SERV.PORTUAR"
+  },
+  {
+    "Codigo": 72,
+    "Descripcion": "LA VIOLETA"
+  },
+  {
+    "Codigo": 73,
+    "Descripcion": "GOWLAND"
+  },
+  {
+    "Codigo": 74,
+    "Descripcion": "PEHUAJO"
+  },
+  {
+    "Codigo": 75,
+    "Descripcion": "SA.F.CORES LTDA."
+  },
+  {
+    "Codigo": 76,
+    "Descripcion": "CA#UELAS"
+  },
+  {
+    "Codigo": 77,
+    "Descripcion": "NAVARRO"
+  },
+  {
+    "Codigo": 78,
+    "Descripcion": "BRANDSEN"
+  },
+  {
+    "Codigo": 79,
+    "Descripcion": "OM. NECOCHEA"
+  },
+  {
+    "Codigo": 80,
+    "Descripcion": "NECOCHEA"
+  },
+  {
+    "Codigo": 81,
+    "Descripcion": "LA PLATA"
+  },
+  {
+    "Codigo": 82,
+    "Descripcion": "FCA CARGILL NECO"
+  },
+  {
+    "Codigo": 83,
+    "Descripcion": "TERMINAL QUEQUEN"
+  },
+  {
+    "Codigo": 84,
+    "Descripcion": "NECOCHEA (ACA)"
+  },
+  {
+    "Codigo": 85,
+    "Descripcion": "MAR DEL PLATA"
+  },
+  {
+    "Codigo": 86,
+    "Descripcion": "ARROYO SECO"
+  },
+  {
+    "Codigo": 87,
+    "Descripcion": "LIMA"
+  },
+  {
+    "Codigo": 88,
+    "Descripcion": "SAN JUSTO"
+  },
+  {
+    "Codigo": 89,
+    "Descripcion": "JUNIN"
+  },
+  {
+    "Codigo": 90,
+    "Descripcion": "BURZACO"
+  },
+  {
+    "Codigo": 91,
+    "Descripcion": "LUJAN"
+  },
+  {
+    "Codigo": 92,
+    "Descripcion": "LINCOLN"
+  },
+  {
+    "Codigo": 93,
+    "Descripcion": "I.CASANOVA"
+  },
+  {
+    "Codigo": 94,
+    "Descripcion": "CHIVILCOY"
+  },
+  {
+    "Codigo": 95,
+    "Descripcion": "AVELLANEDA"
+  },
+  {
+    "Codigo": 96,
+    "Descripcion": "PLANTA GRANAGRO"
+  },
+  {
+    "Codigo": 97,
+    "Descripcion": "SAN VICENTE"
+  },
+  {
+    "Codigo": 98,
+    "Descripcion": "SAN A.DE ARECO"
+  },
+  {
+    "Codigo": 99,
+    "Descripcion": "E.DPAP S.NICOLAS"
+  }
+]

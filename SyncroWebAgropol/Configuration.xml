@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Empresa>
-	<DIR_LECTURA>C:/Users/anocetti/Desktop/datos Agropol/</DIR_LECTURA>
-	<DIR_ESCRITURA>C:\\Users\\anocetti\\Desktop\\</DIR_ESCRITURA>
+	<DIR_LECTURA>/home/alnocetti/git/SyncroWebAgropol/datos Agropol/</DIR_LECTURA>
+	<DIR_ESCRITURA>/home/alnocetti/git/SyncroWebAgropol/json/</DIR_ESCRITURA>
 </Empresa>

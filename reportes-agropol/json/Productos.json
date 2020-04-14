@@ -1,0 +1,206 @@
+[
+  {
+    "Codigo": "001",
+    "Descripcion": "TRIGO"
+  },
+  {
+    "Codigo": "002",
+    "Descripcion": "Lino"
+  },
+  {
+    "Codigo": "003",
+    "Descripcion": "Mani"
+  },
+  {
+    "Codigo": "004",
+    "Descripcion": "CARTAMO"
+  },
+  {
+    "Codigo": "005",
+    "Descripcion": "Aceite de Lino"
+  },
+  {
+    "Codigo": "006",
+    "Descripcion": "Semilla de Soja"
+  },
+  {
+    "Codigo": "007",
+    "Descripcion": "Semilla de Algodon"
+  },
+  {
+    "Codigo": "008",
+    "Descripcion": "GIRASOL"
+  },
+  {
+    "Codigo": "009",
+    "Descripcion": "Canola"
+  },
+  {
+    "Codigo": "010",
+    "Descripcion": "Moha"
+  },
+  {
+    "Codigo": "011",
+    "Descripcion": "COLZA"
+  },
+  {
+    "Codigo": "014",
+    "Descripcion": "Trigo Candeal"
+  },
+  {
+    "Codigo": "015",
+    "Descripcion": "Trigo Semilla"
+  },
+  {
+    "Codigo": "016",
+    "Descripcion": "Avena"
+  },
+  {
+    "Codigo": "017",
+    "Descripcion": "Cebada"
+  },
+  {
+    "Codigo": "018",
+    "Descripcion": "CENTENO"
+  },
+  {
+    "Codigo": "019",
+    "Descripcion": "MAIZ"
+  },
+  {
+    "Codigo": "020",
+    "Descripcion": "Mijo"
+  },
+  {
+    "Codigo": "021",
+    "Descripcion": "Arroz"
+  },
+  {
+    "Codigo": "022",
+    "Descripcion": "SORGO"
+  },
+  {
+    "Codigo": "023",
+    "Descripcion": "SOJA"
+  },
+  {
+    "Codigo": "025",
+    "Descripcion": "Trigo cdo con olor"
+  },
+  {
+    "Codigo": "029",
+    "Descripcion": "PELLETS TRIGO"
+  },
+  {
+    "Codigo": "030",
+    "Descripcion": "ALPISTE"
+  },
+  {
+    "Codigo": "061",
+    "Descripcion": "ARVEJAS"
+  },
+  {
+    "Codigo": "096",
+    "Descripcion": "COLZA"
+  },
+  {
+    "Codigo": "121",
+    "Descripcion": "PELLETS DE GIRASOL"
+  },
+  {
+    "Codigo": "124",
+    "Descripcion": "PELLETS DE SOJA"
+  },
+  {
+    "Codigo": "125",
+    "Descripcion": "PELLETS AFRECHILL0"
+  },
+  {
+    "Codigo": "128",
+    "Descripcion": "SOJA DESACTIVADA"
+  },
+  {
+    "Codigo": "129",
+    "Descripcion": "UREA"
+  },
+  {
+    "Codigo": "130",
+    "Descripcion": "FOSFATO DIAMONICO"
+  },
+  {
+    "Codigo": "131",
+    "Descripcion": "MAIZ QUEBRADO"
+  },
+  {
+    "Codigo": "024",
+    "Descripcion": "Trigo ITA"
+  },
+  {
+    "Codigo": "097",
+    "Descripcion": "Maiz Salsa"
+  },
+  {
+    "Codigo": "026",
+    "Descripcion": "Trigo Art.12"
+  },
+  {
+    "Codigo": "132",
+    "Descripcion": "ARVEJA"
+  },
+  {
+    "Codigo": "032",
+    "Descripcion": "SOJA/ PRIMA FUTURO"
+  },
+  {
+    "Codigo": "514",
+    "Descripcion": ""
+  },
+  {
+    "Codigo": "027",
+    "Descripcion": "PELL CASCARILLA SOJA"
+  },
+  {
+    "Codigo": "123",
+    "Descripcion": "SEMILLA DE SOJA"
+  },
+  {
+    "Codigo": "126",
+    "Descripcion": "TRIGO / AVENA"
+  },
+  {
+    "Codigo": "229",
+    "Descripcion": "PELLETS DE ALGODON"
+  },
+  {
+    "Codigo": "033",
+    "Descripcion": "Trigo Molineria"
+  },
+  {
+    "Codigo": "034",
+    "Descripcion": "Soja Fabrica"
+  },
+  {
+    "Codigo": "035",
+    "Descripcion": "Girasol Fabrica"
+  },
+  {
+    "Codigo": "117",
+    "Descripcion": "CEBADA SCARLET"
+  },
+  {
+    "Codigo": "208",
+    "Descripcion": "GIRASOL OLEICO"
+  },
+  {
+    "Codigo": "108",
+    "Descripcion": "GIRASOL CONFITERO"
+  },
+  {
+    "Codigo": "118",
+    "Descripcion": "CEBADA FORRAJERA"
+  },
+  {
+    "Codigo": "100",
+    "Descripcion": "EXPELLER DE SOJA"
+  }
+]
