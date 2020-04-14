@@ -657,7 +657,7 @@ public class Reader {
 				
 				producto.setCodigo(row.getString("cercodigo"));
 				
-				producto.setDescripcion(row.getString("cernombre"));
+				producto.setDescripcion(row.getString("cernombre").toUpperCase());
 				
 				respuesta.add(producto);
 				
@@ -693,7 +693,7 @@ public class Reader {
 				
 				puerto.setCodigo(row.getInt("tblcodigo"));
 				
-				puerto.setDescripcion(row.getString("tbldescri"));
+				puerto.setDescripcion(row.getString("tbldescri").toUpperCase());
 				
 				respuesta.add(puerto);
 				
