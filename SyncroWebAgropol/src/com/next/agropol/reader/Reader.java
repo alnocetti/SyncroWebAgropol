@@ -18,14 +18,15 @@ import com.next.agropol.model.CuentaCorriente;
 import com.next.agropol.model.Descarga;
 import com.next.agropol.model.Producto;
 import com.next.agropol.model.Puerto;
+import com.next.agropol.model.Usuario;
 import com.next.agropol.model.Vencimiento;
 import com.next.agropol.utils.Utils;
 
 public class Reader {
 	
 	private DBFReader reader;
-	String original = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
-    String ascii = "AAAAAAACEEEEIIIIDNOOOOOOUUUUYBaaaaaaaceeeeiiiionoooooouuuuyyNï¿½";
+	String original = "áàäéèëíìïóòöúùuñÁÀÄÉÈËÍÌÏÓÒÖÚÙÜÑçÇ•";
+    String ascii = "aaaeeeiiiooouuunAAAEEEIIIOOOUUUNcCÑ";
 	SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
 	public Reader() {
@@ -700,6 +701,48 @@ public class Reader {
 				puerto.setDescripcion(row.getString("tbldescri").toUpperCase());
 				
 				respuesta.add(puerto);
+				
+			}
+			
+			DBFUtils.close(reader);
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+		return respuesta;
+		
+	}
+	
+	
+	public List<Usuario> readUsuarios() {
+		
+		List<Usuario> respuesta = new ArrayList<Usuario>();
+		
+		reader = null;
+		
+		try {
+			
+			reader = new DBFReader(new FileInputStream(Application.DIR_LECTURA + "wbusr.dbf"));
+			
+			DBFRow row;
+			
+			while((row = reader.nextRow()) != null) {
+				
+				Usuario usr = new Usuario();
+				
+				usr.setCuenta(row.getString("WBCUENTA"));
+				
+				usr.setEmpresa(row.getString("WBEMPRESA"));
+				
+				usr.setNombre(row.getString("WBNOMBRE"));
+				
+				usr.setPassword(row.getString("WBPASSWD"));
+				
+				usr.setUsuario(row.getString("WBUSR"));
+				
+				respuesta.add(usr);
 				
 			}
 			

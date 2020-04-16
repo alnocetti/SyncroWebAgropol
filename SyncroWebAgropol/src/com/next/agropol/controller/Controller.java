@@ -10,6 +10,7 @@ import com.next.agropol.model.CuentaCorriente;
 import com.next.agropol.model.Descarga;
 import com.next.agropol.model.Producto;
 import com.next.agropol.model.Puerto;
+import com.next.agropol.model.Usuario;
 import com.next.agropol.model.Vencimiento;
 import com.next.agropol.reader.Reader;
 import com.next.agropol.rest.RestClient;
@@ -104,6 +105,13 @@ public class Controller {
 		
 		this.restClient.postPuertos(puertos);
 		
+	}
+	
+	public void postUsuarios() {
+		
+		List<Usuario> usuarios = this.reader.readUsuarios();
+		
+		this.restClient.postUsuarios(usuarios);
 	}
 	
 	public String cargaReportes() {

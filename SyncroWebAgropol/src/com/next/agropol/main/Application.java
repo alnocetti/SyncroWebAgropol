@@ -37,6 +37,7 @@ public class Application {
 		Controller.getInstance().postAnalisis();
 		Controller.getInstance().postComprobantes();
 		Controller.getInstance().postCuentas();
+		Controller.getInstance().postUsuarios();
 		Controller.getInstance().postProductos();
 		Controller.getInstance().postPuertos();
 		

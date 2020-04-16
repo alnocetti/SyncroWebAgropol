@@ -23,6 +23,7 @@ import com.next.agropol.model.CuentaCorriente;
 import com.next.agropol.model.Descarga;
 import com.next.agropol.model.Producto;
 import com.next.agropol.model.Puerto;
+import com.next.agropol.model.Usuario;
 import com.next.agropol.model.Vencimiento;
 import com.next.agropol.reader.Reader;
 
@@ -48,69 +49,12 @@ public class RestClient {
 			
 				Gson gson = new GsonBuilder().setPrettyPrinting().create();
 				
-//				url = new URL("http://api.patagoniawms.com/v1/Articulos");//your url i.e fetch data from .
-//				
-//				conn = (HttpURLConnection) url.openConnection();
-//				
-//				conn.setRequestMethod("POST");
-//				
-//				// seteo api-key 
-//				conn.addRequestProperty("X-API-Key", Application.API_KEY);
-//				
-//				conn.setReadTimeout(30000);
-//				conn.setConnectTimeout(30000);
-//				
-//				conn.setRequestProperty("Content-Type", "application/json");
-//				
-//				conn.setDoOutput(true);
-				
 				Writer writer =  new FileWriter(Application.DIR_ESCRITURA + "CuentasCorrientes.json");
 				gson.toJson(cc, writer);
 				writer.flush();
 				writer.close();
 				
-//				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
-//				bw.write(auxi);
-//				bw.flush();
-//				bw.close();
-//						
-//				InputStreamReader _is;
-//				BufferedReader br;
-//				
-//				if (conn.getResponseCode() < HttpURLConnection.HTTP_BAD_REQUEST) {
-//				    _is = new InputStreamReader(conn.getInputStream());
-//				} else {
-//				     /* error from server */
-//				    _is = new InputStreamReader(conn.getErrorStream());
-//				}
-//				
-//				br = new BufferedReader(_is);
-//				
-//				StringBuilder builder = new StringBuilder();
-//				
-//				String output;
-//				
-//				while ((output = br.readLine()) != null) {
-//		
-//					builder.append(output);
-//				
-//				}
-//				
-//				String aux = builder.toString();
-//				
-//				webResponse.setResponseCode(conn.getResponseCode());
-//				
-//				if (conn.getResponseCode() < conn.HTTP_BAD_REQUEST) {
-//					
-//					webResponse.setResponseMessage(conn.getResponseMessage() + ", Articulo enviado correctamente: " + articulo.getCodigo() + " - " + articulo.getDescripcion());
-//					
-//				} else {
-//				     /* error from server */
-//					webResponse.setResponseMessage(aux);
-//					
-//				}
-//			
-//				conn.disconnect();
+
 			} catch (Exception e) {
 				
 				System.out.println("Exception in NetClientGet:- " + e);
@@ -135,69 +79,11 @@ public class RestClient {
 			
 				Gson gson = new GsonBuilder().setPrettyPrinting().create();
 				
-//				url = new URL("http://api.patagoniawms.com/v1/Articulos");//your url i.e fetch data from .
-//				
-//				conn = (HttpURLConnection) url.openConnection();
-//				
-//				conn.setRequestMethod("POST");
-//				
-//				// seteo api-key 
-//				conn.addRequestProperty("X-API-Key", Application.API_KEY);
-//				
-//				conn.setReadTimeout(30000);
-//				conn.setConnectTimeout(30000);
-//				
-//				conn.setRequestProperty("Content-Type", "application/json");
-//				
-//				conn.setDoOutput(true);
-				
 				Writer writer =  new FileWriter(Application.DIR_ESCRITURA + "Vencimientos.json");
 				gson.toJson(vencimientos, writer);
 				writer.flush();
 				writer.close();
 				
-//				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
-//				bw.write(auxi);
-//				bw.flush();
-//				bw.close();
-//						
-//				InputStreamReader _is;
-//				BufferedReader br;
-//				
-//				if (conn.getResponseCode() < HttpURLConnection.HTTP_BAD_REQUEST) {
-//				    _is = new InputStreamReader(conn.getInputStream());
-//				} else {
-//				     /* error from server */
-//				    _is = new InputStreamReader(conn.getErrorStream());
-//				}
-//				
-//				br = new BufferedReader(_is);
-//				
-//				StringBuilder builder = new StringBuilder();
-//				
-//				String output;
-//				
-//				while ((output = br.readLine()) != null) {
-//		
-//					builder.append(output);
-//				
-//				}
-//				
-//				String aux = builder.toString();
-//				
-//				webResponse.setResponseCode(conn.getResponseCode());
-//				
-//				if (conn.getResponseCode() < conn.HTTP_BAD_REQUEST) {
-//					
-//					webResponse.setResponseMessage(conn.getResponseMessage() + ", Articulo enviado correctamente: " + articulo.getCodigo() + " - " + articulo.getDescripcion());
-//					
-//				} else {
-//				     /* error from server */
-//					webResponse.setResponseMessage(aux);
-//					
-//				}
-//			
-//				conn.disconnect();
 			} catch (Exception e) {
 				
 				System.out.println("Exception in NetClientGet:- " + e);
@@ -221,69 +107,11 @@ public class RestClient {
 			
 				Gson gson = new GsonBuilder().setPrettyPrinting().create();
 				
-//				url = new URL("http://api.patagoniawms.com/v1/Articulos");//your url i.e fetch data from .
-//				
-//				conn = (HttpURLConnection) url.openConnection();
-//				
-//				conn.setRequestMethod("POST");
-//				
-//				// seteo api-key 
-//				conn.addRequestProperty("X-API-Key", Application.API_KEY);
-//				
-//				conn.setReadTimeout(30000);
-//				conn.setConnectTimeout(30000);
-//				
-//				conn.setRequestProperty("Content-Type", "application/json");
-//				
-//				conn.setDoOutput(true);
-				
 				Writer writer =  new FileWriter(Application.DIR_ESCRITURA + "Contratos.json");
 				gson.toJson(contratos, writer);
 				writer.flush();
 				writer.close();
-				
-//				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
-//				bw.write(auxi);
-//				bw.flush();
-//				bw.close();
-//						
-//				InputStreamReader _is;
-//				BufferedReader br;
-//				
-//				if (conn.getResponseCode() < HttpURLConnection.HTTP_BAD_REQUEST) {
-//				    _is = new InputStreamReader(conn.getInputStream());
-//				} else {
-//				     /* error from server */
-//				    _is = new InputStreamReader(conn.getErrorStream());
-//				}
-//				
-//				br = new BufferedReader(_is);
-//				
-//				StringBuilder builder = new StringBuilder();
-//				
-//				String output;
-//				
-//				while ((output = br.readLine()) != null) {
-//		
-//					builder.append(output);
-//				
-//				}
-//				
-//				String aux = builder.toString();
-//				
-//				webResponse.setResponseCode(conn.getResponseCode());
-//				
-//				if (conn.getResponseCode() < conn.HTTP_BAD_REQUEST) {
-//					
-//					webResponse.setResponseMessage(conn.getResponseMessage() + ", Articulo enviado correctamente: " + articulo.getCodigo() + " - " + articulo.getDescripcion());
-//					
-//				} else {
-//				     /* error from server */
-//					webResponse.setResponseMessage(aux);
-//					
-//				}
-//			
-//				conn.disconnect();
+
 			} catch (Exception e) {
 				
 				System.out.println("Exception in NetClientGet:- " + e);
@@ -307,69 +135,11 @@ public class RestClient {
 			
 				Gson gson = new GsonBuilder().setPrettyPrinting().create();
 				
-//				url = new URL("http://api.patagoniawms.com/v1/Articulos");//your url i.e fetch data from .
-//				
-//				conn = (HttpURLConnection) url.openConnection();
-//				
-//				conn.setRequestMethod("POST");
-//				
-//				// seteo api-key 
-//				conn.addRequestProperty("X-API-Key", Application.API_KEY);
-//				
-//				conn.setReadTimeout(30000);
-//				conn.setConnectTimeout(30000);
-//				
-//				conn.setRequestProperty("Content-Type", "application/json");
-//				
-//				conn.setDoOutput(true);
-				
 				Writer writer =  new FileWriter(Application.DIR_ESCRITURA + "Descargas.json");
 				gson.toJson(descargas, writer);
 				writer.flush();
 				writer.close();
 				
-//				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
-//				bw.write(auxi);
-//				bw.flush();
-//				bw.close();
-//						
-//				InputStreamReader _is;
-//				BufferedReader br;
-//				
-//				if (conn.getResponseCode() < HttpURLConnection.HTTP_BAD_REQUEST) {
-//				    _is = new InputStreamReader(conn.getInputStream());
-//				} else {
-//				     /* error from server */
-//				    _is = new InputStreamReader(conn.getErrorStream());
-//				}
-//				
-//				br = new BufferedReader(_is);
-//				
-//				StringBuilder builder = new StringBuilder();
-//				
-//				String output;
-//				
-//				while ((output = br.readLine()) != null) {
-//		
-//					builder.append(output);
-//				
-//				}
-//				
-//				String aux = builder.toString();
-//				
-//				webResponse.setResponseCode(conn.getResponseCode());
-//				
-//				if (conn.getResponseCode() < conn.HTTP_BAD_REQUEST) {
-//					
-//					webResponse.setResponseMessage(conn.getResponseMessage() + ", Articulo enviado correctamente: " + articulo.getCodigo() + " - " + articulo.getDescripcion());
-//					
-//				} else {
-//				     /* error from server */
-//					webResponse.setResponseMessage(aux);
-//					
-//				}
-//			
-//				conn.disconnect();
 			} catch (Exception e) {
 				
 				System.out.println("Exception in NetClientGet:- " + e);
@@ -394,69 +164,11 @@ public class RestClient {
 			
 				Gson gson = new GsonBuilder().setPrettyPrinting().create();
 				
-//				url = new URL("http://api.patagoniawms.com/v1/Articulos");//your url i.e fetch data from .
-//				
-//				conn = (HttpURLConnection) url.openConnection();
-//				
-//				conn.setRequestMethod("POST");
-//				
-//				// seteo api-key 
-//				conn.addRequestProperty("X-API-Key", Application.API_KEY);
-//				
-//				conn.setReadTimeout(30000);
-//				conn.setConnectTimeout(30000);
-//				
-//				conn.setRequestProperty("Content-Type", "application/json");
-//				
-//				conn.setDoOutput(true);
-				
 				Writer writer =  new FileWriter(Application.DIR_ESCRITURA + "Analisis.json");
 				gson.toJson(analisis, writer);
 				writer.flush();
 				writer.close();
 				
-//				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
-//				bw.write(auxi);
-//				bw.flush();
-//				bw.close();
-//						
-//				InputStreamReader _is;
-//				BufferedReader br;
-//				
-//				if (conn.getResponseCode() < HttpURLConnection.HTTP_BAD_REQUEST) {
-//				    _is = new InputStreamReader(conn.getInputStream());
-//				} else {
-//				     /* error from server */
-//				    _is = new InputStreamReader(conn.getErrorStream());
-//				}
-//				
-//				br = new BufferedReader(_is);
-//				
-//				StringBuilder builder = new StringBuilder();
-//				
-//				String output;
-//				
-//				while ((output = br.readLine()) != null) {
-//		
-//					builder.append(output);
-//				
-//				}
-//				
-//				String aux = builder.toString();
-//				
-//				webResponse.setResponseCode(conn.getResponseCode());
-//				
-//				if (conn.getResponseCode() < conn.HTTP_BAD_REQUEST) {
-//					
-//					webResponse.setResponseMessage(conn.getResponseMessage() + ", Articulo enviado correctamente: " + articulo.getCodigo() + " - " + articulo.getDescripcion());
-//					
-//				} else {
-//				     /* error from server */
-//					webResponse.setResponseMessage(aux);
-//					
-//				}
-//			
-//				conn.disconnect();
 			} catch (Exception e) {
 				
 				System.out.println("Exception in NetClientGet:- " + e);
@@ -480,69 +192,11 @@ public class RestClient {
 			
 				Gson gson = new GsonBuilder().setPrettyPrinting().create();
 				
-//				url = new URL("http://api.patagoniawms.com/v1/Articulos");//your url i.e fetch data from .
-//				
-//				conn = (HttpURLConnection) url.openConnection();
-//				
-//				conn.setRequestMethod("POST");
-//				
-//				// seteo api-key 
-//				conn.addRequestProperty("X-API-Key", Application.API_KEY);
-//				
-//				conn.setReadTimeout(30000);
-//				conn.setConnectTimeout(30000);
-//				
-//				conn.setRequestProperty("Content-Type", "application/json");
-//				
-//				conn.setDoOutput(true);
-				
 				Writer writer =  new FileWriter(Application.DIR_ESCRITURA + "Comprobantes.json");
 				gson.toJson(comprobantes, writer);
 				writer.flush();
 				writer.close();
 				
-//				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
-//				bw.write(auxi);
-//				bw.flush();
-//				bw.close();
-//						
-//				InputStreamReader _is;
-//				BufferedReader br;
-//				
-//				if (conn.getResponseCode() < HttpURLConnection.HTTP_BAD_REQUEST) {
-//				    _is = new InputStreamReader(conn.getInputStream());
-//				} else {
-//				     /* error from server */
-//				    _is = new InputStreamReader(conn.getErrorStream());
-//				}
-//				
-//				br = new BufferedReader(_is);
-//				
-//				StringBuilder builder = new StringBuilder();
-//				
-//				String output;
-//				
-//				while ((output = br.readLine()) != null) {
-//		
-//					builder.append(output);
-//				
-//				}
-//				
-//				String aux = builder.toString();
-//				
-//				webResponse.setResponseCode(conn.getResponseCode());
-//				
-//				if (conn.getResponseCode() < conn.HTTP_BAD_REQUEST) {
-//					
-//					webResponse.setResponseMessage(conn.getResponseMessage() + ", Articulo enviado correctamente: " + articulo.getCodigo() + " - " + articulo.getDescripcion());
-//					
-//				} else {
-//				     /* error from server */
-//					webResponse.setResponseMessage(aux);
-//					
-//				}
-//			
-//				conn.disconnect();
 			} catch (Exception e) {
 				
 				System.out.println("Exception in NetClientGet:- " + e);
@@ -566,69 +220,11 @@ public class RestClient {
 			
 				Gson gson = new GsonBuilder().setPrettyPrinting().create();
 				
-//				url = new URL("http://api.patagoniawms.com/v1/Articulos");//your url i.e fetch data from .
-//				
-//				conn = (HttpURLConnection) url.openConnection();
-//				
-//				conn.setRequestMethod("POST");
-//				
-//				// seteo api-key 
-//				conn.addRequestProperty("X-API-Key", Application.API_KEY);
-//				
-//				conn.setReadTimeout(30000);
-//				conn.setConnectTimeout(30000);
-//				
-//				conn.setRequestProperty("Content-Type", "application/json");
-//				
-//				conn.setDoOutput(true);
-				
 				Writer writer =  new FileWriter(Application.DIR_ESCRITURA + "Cuentas.json");
 				gson.toJson(cuentas, writer);
 				writer.flush();
 				writer.close();
 				
-//				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
-//				bw.write(auxi);
-//				bw.flush();
-//				bw.close();
-//						
-//				InputStreamReader _is;
-//				BufferedReader br;
-//				
-//				if (conn.getResponseCode() < HttpURLConnection.HTTP_BAD_REQUEST) {
-//				    _is = new InputStreamReader(conn.getInputStream());
-//				} else {
-//				     /* error from server */
-//				    _is = new InputStreamReader(conn.getErrorStream());
-//				}
-//				
-//				br = new BufferedReader(_is);
-//				
-//				StringBuilder builder = new StringBuilder();
-//				
-//				String output;
-//				
-//				while ((output = br.readLine()) != null) {
-//		
-//					builder.append(output);
-//				
-//				}
-//				
-//				String aux = builder.toString();
-//				
-//				webResponse.setResponseCode(conn.getResponseCode());
-//				
-//				if (conn.getResponseCode() < conn.HTTP_BAD_REQUEST) {
-//					
-//					webResponse.setResponseMessage(conn.getResponseMessage() + ", Articulo enviado correctamente: " + articulo.getCodigo() + " - " + articulo.getDescripcion());
-//					
-//				} else {
-//				     /* error from server */
-//					webResponse.setResponseMessage(aux);
-//					
-//				}
-//			
-//				conn.disconnect();
 			} catch (Exception e) {
 				
 				System.out.println("Exception in NetClientGet:- " + e);
@@ -652,69 +248,11 @@ public class RestClient {
 			
 				Gson gson = new GsonBuilder().setPrettyPrinting().create();
 				
-//				url = new URL("http://api.patagoniawms.com/v1/Articulos");//your url i.e fetch data from .
-//				
-//				conn = (HttpURLConnection) url.openConnection();
-//				
-//				conn.setRequestMethod("POST");
-//				
-//				// seteo api-key 
-//				conn.addRequestProperty("X-API-Key", Application.API_KEY);
-//				
-//				conn.setReadTimeout(30000);
-//				conn.setConnectTimeout(30000);
-//				
-//				conn.setRequestProperty("Content-Type", "application/json");
-//				
-//				conn.setDoOutput(true);
-				
 				Writer writer =  new FileWriter(Application.DIR_ESCRITURA + "Productos.json");
 				gson.toJson(productos, writer);
 				writer.flush();
 				writer.close();
 				
-//				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
-//				bw.write(auxi);
-//				bw.flush();
-//				bw.close();
-//						
-//				InputStreamReader _is;
-//				BufferedReader br;
-//				
-//				if (conn.getResponseCode() < HttpURLConnection.HTTP_BAD_REQUEST) {
-//				    _is = new InputStreamReader(conn.getInputStream());
-//				} else {
-//				     /* error from server */
-//				    _is = new InputStreamReader(conn.getErrorStream());
-//				}
-//				
-//				br = new BufferedReader(_is);
-//				
-//				StringBuilder builder = new StringBuilder();
-//				
-//				String output;
-//				
-//				while ((output = br.readLine()) != null) {
-//		
-//					builder.append(output);
-//				
-//				}
-//				
-//				String aux = builder.toString();
-//				
-//				webResponse.setResponseCode(conn.getResponseCode());
-//				
-//				if (conn.getResponseCode() < conn.HTTP_BAD_REQUEST) {
-//					
-//					webResponse.setResponseMessage(conn.getResponseMessage() + ", Articulo enviado correctamente: " + articulo.getCodigo() + " - " + articulo.getDescripcion());
-//					
-//				} else {
-//				     /* error from server */
-//					webResponse.setResponseMessage(aux);
-//					
-//				}
-//			
-//				conn.disconnect();
 			} catch (Exception e) {
 				
 				System.out.println("Exception in NetClientGet:- " + e);
@@ -738,69 +276,41 @@ public class RestClient {
 			
 				Gson gson = new GsonBuilder().setPrettyPrinting().create();
 				
-//				url = new URL("http://api.patagoniawms.com/v1/Articulos");//your url i.e fetch data from .
-//				
-//				conn = (HttpURLConnection) url.openConnection();
-//				
-//				conn.setRequestMethod("POST");
-//				
-//				// seteo api-key 
-//				conn.addRequestProperty("X-API-Key", Application.API_KEY);
-//				
-//				conn.setReadTimeout(30000);
-//				conn.setConnectTimeout(30000);
-//				
-//				conn.setRequestProperty("Content-Type", "application/json");
-//				
-//				conn.setDoOutput(true);
-				
 				Writer writer =  new FileWriter(Application.DIR_ESCRITURA + "Puertos.json");
 				gson.toJson(puertos, writer);
 				writer.flush();
 				writer.close();
 				
-//				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
-//				bw.write(auxi);
-//				bw.flush();
-//				bw.close();
-//						
-//				InputStreamReader _is;
-//				BufferedReader br;
-//				
-//				if (conn.getResponseCode() < HttpURLConnection.HTTP_BAD_REQUEST) {
-//				    _is = new InputStreamReader(conn.getInputStream());
-//				} else {
-//				     /* error from server */
-//				    _is = new InputStreamReader(conn.getErrorStream());
-//				}
-//				
-//				br = new BufferedReader(_is);
-//				
-//				StringBuilder builder = new StringBuilder();
-//				
-//				String output;
-//				
-//				while ((output = br.readLine()) != null) {
-//		
-//					builder.append(output);
-//				
-//				}
-//				
-//				String aux = builder.toString();
-//				
-//				webResponse.setResponseCode(conn.getResponseCode());
-//				
-//				if (conn.getResponseCode() < conn.HTTP_BAD_REQUEST) {
-//					
-//					webResponse.setResponseMessage(conn.getResponseMessage() + ", Articulo enviado correctamente: " + articulo.getCodigo() + " - " + articulo.getDescripcion());
-//					
-//				} else {
-//				     /* error from server */
-//					webResponse.setResponseMessage(aux);
-//					
-//				}
-//			
-//				conn.disconnect();
+
+			} catch (Exception e) {
+				
+				System.out.println("Exception in NetClientGet:- " + e);
+				intentos++;
+				continue;
+			}
+			
+			return;
+		}
+		
+		return;
+	}
+	
+	public void postUsuarios(List<Usuario> usuarios) {
+		
+		intentos = 0;
+		
+		while (intentos <= 1) {
+			
+			try {
+			
+				Gson gson = new GsonBuilder().setPrettyPrinting().create();
+				
+				Writer writer =  new FileWriter(Application.DIR_ESCRITURA + "Usuarios.json");
+				gson.toJson(usuarios, writer);
+				writer.flush();
+				writer.close();
+				
+
 			} catch (Exception e) {
 				
 				System.out.println("Exception in NetClientGet:- " + e);

@@ -12,6 +12,7 @@ public class Comprobante {
 	private String FechaVencimiento;
 	private float Total;
 	private int Kilos;
+	
 	public String getCuenta() {
 		return Cuenta;
 	}
