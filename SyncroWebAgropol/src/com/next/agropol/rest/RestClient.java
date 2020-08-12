@@ -332,7 +332,7 @@ public class RestClient {
 
 		try {
 			
-			url = new URL("http://localhost:8080/reportes-agropol/wsCargaReportes.php");
+			url = new URL("http://localhost/agropol/reportes-agropol/wsCargaReportes.php");
 
 			conn = (HttpURLConnection) url.openConnection();
 			
